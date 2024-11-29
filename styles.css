@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.day {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.day.unlocked {
+    background-color: #76c893;
+    color: #fff;
+}
+.gift {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12px;
+    color: #333;
+    visibility: hidden;
+}
+.day.unlocked .gift {
+    visibility: visible;
+}
